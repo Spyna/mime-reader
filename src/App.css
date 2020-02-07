@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+#file-selector {
+  margin: 50px;
+}
+
+.part {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 20px;
+  text-align: left;
+}
+
+.part img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+.multipart_signed {
+  background-color: #EDD3ED;
+}
+
+.multipart_mixed {
+  background-color: #C8EFD4;
+}
+
+.multipart_alternative {
+  background-color: #FFFA99;
+}
+
+.text_plain {
+  background-color: #E6E6E6;
+}
+
+.text_html {
+  background-color: #C8EBFA;
+}
+
+.message_rfc822 {
+  background-color: #FBCFD0;
+}
+
+.application_xml {
+  background-color: #FFE5D4;
+}
+
+.application_pkcs7-signature {
+  background-color: #D3D5F5;
+}
