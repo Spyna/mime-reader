@@ -20,7 +20,7 @@ function Part({ type, disposition, children }) {
             </span>
             <span>
                 {type}
-                {isAttachment && ' (' + disposition.params.filename + ')'}
+                {disposition && disposition.params && disposition.params.filename && ' (' + disposition.params.filename + ')'}
             </span>
             {children.map((part, key) => (
                 <Part
