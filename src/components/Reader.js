@@ -17,7 +17,7 @@ function Reader() {
         <section id="reader">
             <p>Please choose an .eml file containing a MIME message</p>
             <div id="file-selector">
-                <input type="file" onChange={onUpload} />
+                <input type="file" accept=".eml" onChange={onUpload} />
             </div>
             <Viewer file={file} />
         </section>
