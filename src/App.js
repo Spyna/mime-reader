@@ -4,7 +4,19 @@ import Reader from './components/Reader';
 
 function App() {
   return (
-    <Reader />
+    <div className="App">
+      <header>
+        <h1>EML MIME Reader</h1>
+      </header>
+
+      <Reader />
+
+      <footer>
+        <small>
+          &copy; 2020 <a href="https://github.com/pixel13" target="_blank" rel="noopener noreferrer">pixel13</a>
+        </small>
+      </footer>
+    </div>
   );
 }
 
