@@ -23,7 +23,7 @@ header h1 {
 .reader {
   flex: 1 0 auto;
   display: inline-block;
-  max-width: 400px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
