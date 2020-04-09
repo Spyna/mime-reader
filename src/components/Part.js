@@ -2,13 +2,14 @@ import React from 'react';
 import attachmentIcon from './attachment.png';
 import inlineIcon from './inline.png';
 import multipartIcon from './multipart.png';
-import randomColor from 'randomcolor';
+import { getColorByDepth } from '../util/color';
 
-function Part({ type, disposition, children }) {
+
+function Part({ type, disposition, children, depth }) {
     const isLeaf = children.length === 0,
         isAttachment = isLeaf && disposition && disposition.value === 'attachment',
         icon = isAttachment ? attachmentIcon : (isLeaf ? inlineIcon : multipartIcon),
-        color = randomColor({luminosity: "light", alpha: 0.5, format: "rgba"});
+        color = getColorByDepth(depth);
 
     return (
         <div className="part" style={{backgroundColor: color}}>
@@ -28,6 +29,7 @@ function Part({ type, disposition, children }) {
                     type={part.contentType.value}
                     disposition={part.headers['content-disposition'] && part.headers['content-disposition'][0]}
                     children={part.childNodes}
+                    depth={depth+1}
                 />
             ))}
         </div>
