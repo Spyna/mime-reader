@@ -8,8 +8,10 @@ function App() {
       <header>
         <h1>EML MIME Reader</h1>
       </header>
-
-      <Reader />
+  
+      <section className="reader-container">
+        <Reader />
+      </section>
 
       <footer>
         <small>

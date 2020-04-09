@@ -4,10 +4,8 @@ html, body, #root {
 
 .App {
   text-align: center;
-  width: 80%;
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -17,12 +15,23 @@ header h1 {
   color: #0066CC;
 }
 
-#reader {
+.reader-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.reader {
   flex: 1 0 auto;
+  display: inline-block;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 footer {
-  margin: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin: 20px 0;
   flex-shrink: 0;
 }
 
@@ -39,6 +48,7 @@ footer small {
   padding: 10px;
   margin: 20px;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .part img {

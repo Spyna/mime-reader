@@ -12,6 +12,7 @@ function Viewer({ file }) {
                 type={file.contentType.value} 
                 disposition={file.headers['content-disposition'] && file.headers['content-disposition'][0]} 
                 children={file.childNodes}
+                depth={0}
             />
         </div>
     );
