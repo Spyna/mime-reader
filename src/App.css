@@ -44,11 +44,15 @@ footer small {
 }
 
 .part {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 20px;
-  text-align: left;
-  word-wrap: break-word;
+ /* border: 1px solid black; */
+    padding: 10px;
+    margin: 20px;
+    text-align: left;
+    word-wrap: break-word;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    background-color: #cccccc3b;
+
 }
 
 .part img {
