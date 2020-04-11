@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import FileSelector from './FileSelector';
 import Viewer from './Viewer';
 import parse from 'emailjs-mime-parser';
 import compareIcon from './imgs/compare.png';
 
-function Reader({comparing = false}) {
+function Reader() {
     const [file, setFile] = useState();
     const [compare, setCompare] = useState(false);
 
@@ -22,17 +23,14 @@ function Reader({comparing = false}) {
     return (
         <>
             <section className="reader">
-                <p>{comparing ? "Compare with" : "Please choose an .eml file containing a MIME message"}</p>
-                <div class="file-selector">
-                    <input type="file" accept=".eml" onChange={onUpload} />
-                </div>
+                <FileSelector onUpload={onUpload} />
                 <Viewer file={file} />
-                {file && !compare && <div class="compare-action" onClick={toggleCompare}>
+                {file && !compare && <div className="compare-action" onClick={toggleCompare}>
                     <img src={compareIcon} alt="Click to compare with another file"/>
                     <p>Compare</p>
                 </div>}
             </section>
-            {compare && <Reader comparing={true}/>}
+            {compare && <Reader />}
         </>
     );
 }

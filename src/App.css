@@ -73,7 +73,14 @@ footer small {
 }
 
 .file-selector {
-  margin: 30px;
+  margin: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.file-selector input[type="file"] {
+  display: none;
 }
 
 .part {
