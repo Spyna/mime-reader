@@ -1,7 +1,7 @@
 import React from 'react';
-import attachmentIcon from './attachment.png';
-import inlineIcon from './inline.png';
-import multipartIcon from './multipart.png';
+import attachmentIcon from './imgs/attachment.png';
+import inlineIcon from './imgs/inline.png';
+import multipartIcon from './imgs/multipart.png';
 
 
 function Part({ type, disposition, children, depth }) {
