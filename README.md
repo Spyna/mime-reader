@@ -2,4 +2,4 @@
 
 ### Shows the structure of a MIME multipart email message (.eml)
 
-Just upload an .eml file and the page will display the MIME structure of the email.
+This is a simple application that shows and compares the MIME structure of one or more email messages (.eml files).

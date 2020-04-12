@@ -1,7 +1,11 @@
 {
   "name": "mime-reader",
   "version": "1.0.0",
+  "description": "Simple application to read and compare .eml file in MIME format",
   "private": true,
+  "author": "Tiziano Pessa <tiziano.pessa@register.it> (https://github.com/pixel13)",
+  "repository": "github:pixel13/mime-reader",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
