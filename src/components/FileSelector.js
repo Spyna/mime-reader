@@ -1,32 +1,32 @@
-import React, { useState, useCallback, useMemo } from "react";
-import { useDropzone } from "react-dropzone";
+import React, { useState, useCallback, useMemo } from "react"
+import { useDropzone } from "react-dropzone"
 
 function FileSelector({ onUpload }) {
-  const [filename, setFilename] = useState();
+  const [filename, setFilename] = useState()
 
   const onDrop = useCallback(
     (acceptedFiles) => {
       acceptedFiles.forEach((file) => {
-        setFilename(file.name);
-        onUpload(file);
-      });
+        setFilename(file.name)
+        onUpload(file)
+      })
     },
     [onUpload]
-  );
+  )
   const { getRootProps, getInputProps, isDragActive, isDragAccept } =
-    useDropzone({ onDrop, maxFiles: 1 });
+    useDropzone({ onDrop, maxFiles: 1 })
 
   const classes = useMemo(
     () =>
       [
         "dropzone",
         isDragActive ? "dropzone-active" : null,
-        isDragAccept ? "dropzone-accept" : null,
+        isDragAccept ? "dropzone-accept" : null
       ]
         .filter(Boolean)
         .join(" "),
     [isDragActive, isDragAccept]
-  );
+  )
 
   return (
     <div>
@@ -43,7 +43,7 @@ function FileSelector({ onUpload }) {
         </p>
       </div>
     </div>
-  );
+  )
 }
 
-export default FileSelector;
+export default FileSelector
