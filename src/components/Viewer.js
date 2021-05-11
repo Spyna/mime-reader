@@ -5,18 +5,11 @@ function Viewer({ file }) {
   if (!file) {
     return null
   }
+  console.log(file)
 
   return (
     <div id="viewer">
-      <Part
-        type={file.contentType.value}
-        disposition={
-          file.headers["content-disposition"] &&
-          file.headers["content-disposition"][0]
-        }
-        children={file.childNodes}
-        depth={0}
-      />
+      <Part mimeNode={file} depth={0} />
     </div>
   )
 }
