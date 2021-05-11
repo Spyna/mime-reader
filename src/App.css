@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -13,7 +15,7 @@ html, body, #root {
 
 header h1 {
   font-size: x-large;
-  color: #0066CC;
+  color: #0066cc;
 }
 
 .reader-container {
@@ -45,18 +47,19 @@ header h1 {
   height: 1.5em;
   vertical-align: top;
   margin-right: 5px;
-  filter: invert(34%) sepia(9%) saturate(4362%) hue-rotate(303deg) brightness(95%) contrast(94%);
+  filter: invert(34%) sepia(9%) saturate(4362%) hue-rotate(303deg)
+    brightness(95%) contrast(94%);
 }
 
 .compare-action p {
   opacity: 0;
   max-width: 0;
-  transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s;
+  transition: max-width 1s ease-out 0.1s, opacity 1s ease-out 0.1s;
   overflow: hidden;
   display: inline-block;
   margin: 0;
   margin-top: 2px;
-  color: #B23E50;
+  color: #b23e50;
 }
 
 .compare-action:hover p {
@@ -84,13 +87,13 @@ footer small {
 }
 
 .part {
-    padding: 8px;
-    margin: 15px;
-    text-align: left;
-    word-wrap: break-word;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    background-color: #cccccc3b;
+  padding: 8px;
+  margin: 15px;
+  text-align: left;
+  word-wrap: break-word;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #cccccc3b;
 }
 
 .part img {
@@ -98,4 +101,29 @@ footer small {
   height: 0.9em;
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.dropzone {
+  width: 100%;
+  height: 50px;
+  background: #fafafa;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 6px rgb(0 0 0/ 50%);
+  transition: border 0.24s ease-in-out;
+}
+
+.dropzone-active {
+  border-color: rgb(33, 150, 243);
+  box-shadow: 3px 3px 6px rgba(33, 150, 243, 0.4);
+}
+
+.dropzone-accept {
+  border-color: rgb(0, 230, 118);
+  box-shadow: 3px 3px 6px rgba(0, 230, 118, 0.4);
 }

@@ -8,12 +8,12 @@ function Reader() {
     const [file, setFile] = useState();
     const [compare, setCompare] = useState(false);
 
-    function onUpload(e) {
+    function onUpload(file) {
         const reader = new FileReader();
         reader.onload = function (event) {
             setFile(parse(event.target.result));
         };
-        reader.readAsBinaryString(e.target.files[0]);
+        reader.readAsBinaryString(file);
     }
 
     function toggleCompare() {

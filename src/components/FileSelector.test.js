@@ -22,7 +22,7 @@ it('renders the empty file selector with a label', () => {
   });
 
   expect(container.querySelectorAll("input[type='file']").length).toBe(1);
-  expect(container.textContent).toContain("Click to select");
+  expect(container.textContent).toContain("Drop file here, or click to select an .eml file");
 });
 
 it('shows the filename and invoke the callback when a file is selected', async () => {
@@ -49,7 +49,7 @@ it('shows the filename and invoke the callback when a file is selected', async (
     fireEvent.change(container.querySelector("input[type='file']"), event);
   });
 
-  expect(container.textContent).not.toContain("Click to select");
+  expect(container.textContent).toContain("Viewing message.emlDrop file here, or click to select an .eml file");
   expect(container.textContent).toContain("message.eml");
   expect(invoked).toBe(true);
 });
