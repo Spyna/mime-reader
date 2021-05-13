@@ -7,6 +7,7 @@
   "repository": "github:pixel13/mime-reader",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",

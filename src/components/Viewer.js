@@ -1,11 +1,10 @@
 import React from "react"
-import Part from "./Part"
+import Part from "./Part/Part"
 
 function Viewer({ file }) {
   if (!file) {
     return null
   }
-  console.log(file)
 
   return (
     <div id="viewer">
